@@ -3,7 +3,7 @@ import os, streams, xmlparser, xmltree, strutils, strformat, sequtils
 when isMainModule:
 
   if paramCount() != 3:
-    quit("Usage: webxmltosser init-param name value web.xml")
+    quit("Usage: webxmltosser name value web.xml")
   
   var x = loadXml(paramStr(3))
   let params = concat(x.findAll("context-param"), x.findAll("init-param"))
